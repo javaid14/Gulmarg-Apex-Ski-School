@@ -1,6 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import { MapPin, Phone, Mail, Mountain } from "lucide-react";
 import { packages, tours, treks } from "@/data/packages";
+import Image from "next/image";
+import { withBasePath } from "@/lib/basePath";
 
 const allLinks = [...packages, ...tours, ...treks];
 
@@ -10,7 +14,19 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div>
           <div className="flex items-center gap-2 text-snow mb-4">
-            <Mountain className="h-6 w-6 text-ember-500" />
+            <Link
+              href="/"
+              className="relative flex h-24 w-40 items-center"
+              onClick={() => setOpen(false)}
+            >
+              <Image
+                src={withBasePath("/images/logo/logoblue-amber.png")}
+                alt="Gulmarg Apex Ski School"
+                fill
+                className="px-2"
+                priority
+              />
+            </Link>
             <span className="font-display font-bold">
               Gulmarg Apex Ski School
             </span>

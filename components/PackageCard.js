@@ -1,6 +1,7 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { Clock, ArrowUpRight } from 'lucide-react';
+import Image from "next/image";
+import Link from "next/link";
+import { Clock, ArrowUpRight } from "lucide-react";
+import { withBasePath } from "@/lib/basePath";
 
 export default function PackageCard({ pkg }) {
   return (
@@ -10,7 +11,7 @@ export default function PackageCard({ pkg }) {
     >
       <div className="relative h-52 w-full overflow-hidden">
         <Image
-          src={pkg.image}
+          src={withBasePath(pkg.image)}
           alt={pkg.title}
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -21,13 +22,19 @@ export default function PackageCard({ pkg }) {
         </span>
       </div>
       <div className="flex flex-1 flex-col p-6">
-        <h3 className="font-display font-semibold text-lg text-alpine-950 mb-1.5">{pkg.title}</h3>
+        <h3 className="font-display font-semibold text-lg text-alpine-950 mb-1.5">
+          {pkg.title}
+        </h3>
         <p className="flex items-center gap-1.5 text-sm text-alpine-700/70 mb-3">
           <Clock className="h-4 w-4" /> {pkg.duration}
         </p>
-        <p className="text-sm text-slate-600 leading-relaxed mb-5 line-clamp-2">{pkg.summary}</p>
+        <p className="text-sm text-slate-600 leading-relaxed mb-5 line-clamp-2">
+          {pkg.summary}
+        </p>
         <div className="mt-auto flex items-center justify-between">
-          <span className="font-display font-bold text-alpine-950">{pkg.price}</span>
+          <span className="font-display font-bold text-alpine-950">
+            {pkg.price}
+          </span>
           <span className="flex items-center gap-1 text-sm font-semibold text-ember-600 group-hover:gap-2 transition-all">
             View Details <ArrowUpRight className="h-4 w-4" />
           </span>
