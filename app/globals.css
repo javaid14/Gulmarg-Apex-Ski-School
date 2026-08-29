@@ -12,11 +12,11 @@ html {
 }
 
 .slope-edge {
-  clip-path: none;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .slope-edge-top {
-  clip-path: none;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 @media (min-width: 768px) {

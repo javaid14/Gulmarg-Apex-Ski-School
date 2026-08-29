@@ -77,7 +77,7 @@ export default function ContactPage() {
               <div className="flex items-start gap-3">
                 <Mail className="h-6 w-6 text-ember-500 shrink-0" />
                 <a
-                  href="mailto:info@gulmargapexskischool.com"
+                  href="mailto:admin@gulmargapexskischool.com"
                   className="text-slate-700 hover:text-ember-600 transition-colors"
                 >
                   admin@gulmargapexskischool.com

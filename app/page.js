@@ -19,9 +19,11 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative slope-edge bg-alpine-950 pb-28 pt-28 md:pt-36 md:pb-40">
-        <HeroCarousel />
-        <div className="absolute inset-0 bg-gradient-to-b from-alpine-950/60 via-alpine-950/70 to-alpine-950" />
+      <section className="relative slope-edge bg-alpine-950 min-h-[520px] pb-28 pt-28 md:pt-36 md:pb-40 overflow-hidden">
+        <div className="absolute inset-0">
+          <HeroCarousel />
+          <div className="absolute inset-0 bg-gradient-to-b from-alpine-950/60 via-alpine-950/70 to-alpine-950" />
+        </div>
         <div className="relative mx-auto max-w-4xl px-6 text-center">
           <p className="text-ember-400 font-semibold tracking-widest uppercase text-sm mb-4">
             Welcome to
