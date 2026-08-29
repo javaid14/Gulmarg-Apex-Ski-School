@@ -1,36 +1,33 @@
 "use client";
 
 import Link from "next/link";
-import { MapPin, Phone, Mail, Mountain } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 import { packages, tours, treks } from "@/data/packages";
 import Image from "next/image";
 import { withBasePath } from "@/lib/basePath";
 
 const allLinks = [...packages, ...tours, ...treks];
+const FOOTER_PACKAGE_LIMIT = 6;
 
 export default function Footer() {
   return (
     <footer className="bg-alpine-950 text-ice-200">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div>
-          <div className="flex items-center gap-2 text-snow mb-4">
-            <Link
-              href="/"
-              className="relative flex h-24 w-40 items-center"
-              onClick={() => setOpen(false)}
-            >
+          <Link href="/" className=" -mt-4 flex items-start text-snow">
+            <div className="relative h-16 w-32">
               <Image
                 src={withBasePath("/images/logo/logoblue-amber.png")}
                 alt="Gulmarg Apex Ski School"
                 fill
-                className="px-2"
+                className="object-contain object-left"
                 priority
               />
-            </Link>
-            <span className="font-display font-bold">
-              Gulmarg Apex Ski School
-            </span>
-          </div>
+            </div>
+          </Link>
+          <p className="mb-4 font-display font-bold leading-tight whitespace-nowrap">
+            Gulmarg Apex Ski School
+          </p>
           <p className="text-sm text-ice-400 leading-relaxed">
             Premium skiing, snowboarding, and adventure tourism experiences in
             Gulmarg, Kashmir.
@@ -89,8 +86,8 @@ export default function Footer() {
           <h4 className="font-display font-semibold text-snow mb-4 text-sm tracking-wide uppercase">
             All Packages
           </h4>
-          <ul className="space-y-2.5 text-sm max-h-64 overflow-hidden">
-            {allLinks.map((p) => (
+          <ul className="space-y-2.5 text-sm">
+            {allLinks.slice(0, FOOTER_PACKAGE_LIMIT).map((p) => (
               <li key={p.slug}>
                 <Link
                   href={`/packages/${p.slug}`}
@@ -100,6 +97,16 @@ export default function Footer() {
                 </Link>
               </li>
             ))}
+            {allLinks.length > FOOTER_PACKAGE_LIMIT && (
+              <li>
+                <Link
+                  href="/packages"
+                  className="font-semibold text-ember-400 hover:text-ember-300 transition-colors"
+                >
+                  View All Packages &rarr;
+                </Link>
+              </li>
+            )}
           </ul>
         </div>
 
@@ -108,17 +115,27 @@ export default function Footer() {
             Contact Info
           </h4>
           <ul className="space-y-3 text-sm">
-            <li className="flex gap-2.5">
-              <MapPin className="h-5 w-5 shrink-0 text-ember-500" /> Gulmarg,
-              Jammu and Kashmir 193403
+            <li className="flex items-start gap-2.5">
+              <MapPin className="h-5 w-5 shrink-0 text-ember-500 mt-0.5" />
+              <span>Gulmarg, Jammu and Kashmir 193403</span>
             </li>
-            <li className="flex gap-2.5">
-              <Phone className="h-5 w-5 shrink-0 text-ember-500" /> +91
-              7051566436
+            <li className="flex items-center gap-2.5">
+              <Phone className="h-5 w-5 shrink-0 text-ember-500" />
+              <a
+                href="tel:+917051566436"
+                className="hover:text-ember-400 transition-colors"
+              >
+                +91 7051566436
+              </a>
             </li>
-            <li className="flex gap-2.5">
-              <Mail className="h-5 w-5 shrink-0 text-ember-500" />{" "}
-              info@gulmargapexskischool.com
+            <li className="flex items-center gap-2.5">
+              <Mail className="h-5 w-5 shrink-0 text-ember-500" />
+              <a
+                href="mailto:admin@gulmargapexskischool.com"
+                className="hover:text-ember-400 transition-colors"
+              >
+                admin@gulmargapexskischool.com
+              </a>
             </li>
           </ul>
         </div>

@@ -23,20 +23,26 @@ export default function HeroCarousel({ interval = 5000 }) {
   }, [interval]);
 
   return (
-    <>
+    <div className="absolute inset-0 overflow-hidden -z-10">
       {images.map((src, i) => (
-        <Image
+        <div
           key={src}
-          src={src}
-          alt="Skier descending a snowy slope in Gulmarg"
-          fill
-          priority={i === 0}
-          unoptimized
-          className={`object-cover opacity-40 transition-opacity duration-1000 ease-in-out ${
-            i === index ? "opacity-40" : "opacity-0"
-          }`}
-        />
+          className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+          style={{
+            opacity: i === index ? 0.4 : 0,
+            zIndex: i === index ? 1 : 0,
+          }}
+        >
+          <Image
+            src={src}
+            alt="Skier descending a snowy slope in Gulmarg"
+            fill
+            priority
+            unoptimized
+            className="object-cover"
+          />
+        </div>
       ))}
-    </>
+    </div>
   );
 }
