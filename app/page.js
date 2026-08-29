@@ -24,6 +24,7 @@ export default function HomePage() {
           alt="Skier descending a snowy slope in Gulmarg"
           fill
           priority
+          unoptimized
           className="object-cover opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-alpine-950/60 via-alpine-950/70 to-alpine-950" />
