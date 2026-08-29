@@ -13,20 +13,14 @@ import ActivityCard from "@/components/ActivityCard";
 import Testimonial from "@/components/Testimonial";
 import { packages, tours, treks } from "@/data/packages";
 import { activities } from "@/data/activities";
+import HeroCarousel from "@/components/HeroCarousel";
 
 export default function HomePage() {
   return (
     <>
       {/* Hero */}
       <section className="relative slope-edge bg-alpine-950 pb-28 pt-28 md:pt-36 md:pb-40">
-        <Image
-          src="https://images.unsplash.com/photo-1551524559-8af4e6624178?q=80&w=1920&auto=format&fit=crop"
-          alt="Skier descending a snowy slope in Gulmarg"
-          fill
-          priority
-          unoptimized
-          className="object-cover opacity-40"
-        />
+        <HeroCarousel />
         <div className="absolute inset-0 bg-gradient-to-b from-alpine-950/60 via-alpine-950/70 to-alpine-950" />
         <div className="relative mx-auto max-w-4xl px-6 text-center">
           <p className="text-ember-400 font-semibold tracking-widest uppercase text-sm mb-4">

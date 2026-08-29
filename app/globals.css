@@ -12,13 +12,24 @@ html {
 }
 
 .slope-edge {
-  clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%);
+  clip-path: none;
 }
 
 .slope-edge-top {
-  clip-path: polygon(0 18%, 100% 0, 100% 100%, 0 100%);
+  clip-path: none;
 }
 
+@media (min-width: 768px) {
+  .slope-edge-top {
+    clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
+  }
+}
+
+@media (min-width: 768px) {
+  .slope-edge {
+    clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%);
+  }
+}
 .text-balance {
   text-wrap: balance;
 }

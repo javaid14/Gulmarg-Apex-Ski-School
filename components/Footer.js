@@ -73,7 +73,7 @@ export default function Footer() {
           <h4 className="font-display font-semibold text-snow mb-4 text-sm tracking-wide uppercase">
             All Packages
           </h4>
-          <ul className="space-y-2.5 text-sm max-h-56 overflow-hidden">
+          <ul className="space-y-2.5 text-sm max-h-64 overflow-hidden">
             {allLinks.map((p) => (
               <li key={p.slug}>
                 <Link

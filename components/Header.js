@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 import { Menu, X, Mountain } from "lucide-react";
 
 const NAV_LINKS = [
@@ -21,10 +22,16 @@ export default function Header() {
         <div className="flex h-20 items-center justify-between">
           <Link
             href="/"
-            className="flex items-center gap-2 text-snow"
+            className="relative flex h-24 w-40 items-center"
             onClick={() => setOpen(false)}
           >
-            <Mountain className="h-7 w-7 text-ember-500" strokeWidth={2.2} />
+            <Image
+              src="/images/logo/logoblue-amber.png"
+              alt="Gulmarg Apex Ski School"
+              fill
+              className="px-2"
+              priority
+            />
           </Link>
 
           <nav className="hidden md:flex items-center gap-9">
