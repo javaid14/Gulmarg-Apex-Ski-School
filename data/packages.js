@@ -150,7 +150,7 @@ export const tours = [
     title: "Kashmir Tour 5 Days 4 Nights",
     duration: "5 Days / 4 Nights",
     price: "₹28,000",
-    image: "/images/tours/Kashmir5.jpg",
+    image: "/images/tours/kashmir5.jpg",
     summary:
       "A condensed Kashmir circuit covering Srinagar and Gulmarg\u2019s essential highlights.",
     highlights: [
