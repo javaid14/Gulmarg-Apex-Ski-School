@@ -5,10 +5,7 @@ const nextConfig = {
   },
   output: "export",
   basePath: "/Gulmarg-Apex-Ski-School",
-  assetPrefix: "/Gulmarg-Apex-Ski-School",
-  images: {
-    unoptimized: true,
-  },
+  assetPrefix: "/Gulmarg-Apex-Ski-School/",
 };
 
 export default nextConfig;
