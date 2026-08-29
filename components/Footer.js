@@ -4,7 +4,6 @@ import Link from "next/link";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { packages, tours, treks } from "@/data/packages";
 import Image from "next/image";
-import { withBasePath } from "@/lib/basePath";
 
 const allLinks = [...packages, ...tours, ...treks];
 const FOOTER_PACKAGE_LIMIT = 6;
@@ -17,7 +16,7 @@ export default function Footer() {
           <Link href="/" className=" -mt-4 flex items-start text-snow">
             <div className="relative h-16 w-32">
               <Image
-                src={withBasePath("/images/logo/logoblue-amber.png")}
+                src={"/images/logo/logoblue-amber.png"}
                 alt="Gulmarg Apex Ski School"
                 fill
                 className="object-contain object-left"

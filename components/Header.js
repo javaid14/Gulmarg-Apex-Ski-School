@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 import { Menu, X, Mountain } from "lucide-react";
-import { withBasePath } from "@/lib/basePath";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -27,7 +26,7 @@ export default function Header() {
             onClick={() => setOpen(false)}
           >
             <Image
-              src={withBasePath("/images/logo/logoblue-amber.png")}
+              src={"/images/logo/logoblue-amber.png"}
               alt="Gulmarg Apex Ski School"
               fill
               className="px-2"

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { withBasePath } from "@/lib/basePath";
 
 export default function ActivityCard({ activity }) {
   return (
@@ -10,7 +9,7 @@ export default function ActivityCard({ activity }) {
       className="group relative flex flex-col overflow-hidden rounded-2xl h-80"
     >
       <Image
-        src={withBasePath(activity.image)}
+        src={activity.image}
         alt={activity.title}
         fill
         className="object-cover group-hover:scale-105 transition-transform duration-500"

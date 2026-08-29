@@ -4,7 +4,6 @@ import { notFound } from "next/navigation";
 import { Check, Clock, Phone } from "lucide-react";
 import { allPackages, getPackageBySlug } from "@/data/packages";
 import BookingSidebar from "@/components/BookingSidebar";
-import { withBasePath } from "@/lib/basePath";
 
 export function generateStaticParams() {
   return allPackages.map((p) => ({ slug: p.slug }));
@@ -27,7 +26,7 @@ export default function PackageDetailPage({ params }) {
     <div>
       <section className="relative h-[46vh] min-h-[380px] w-full">
         <Image
-          src={withBasePath(pkg.image)}
+          src={pkg.image}
           alt={pkg.title}
           fill
           priority

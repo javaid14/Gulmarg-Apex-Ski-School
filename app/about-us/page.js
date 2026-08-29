@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ShieldCheck, Award, Smile, Medal, Trophy, Globe2 } from "lucide-react";
-import { withBasePath } from "@/lib/basePath";
 
 export const metadata = {
   title: "About Us | Gulmarg Apex Ski School",
@@ -42,7 +41,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="relative h-[45vh] min-h-[340px] w-full">
         <Image
-          src={withBasePath("/images/hero/hero-5.jpeg")}
+          src={"/images/hero/hero-5.jpeg"}
           alt="Snow-covered mountains in Gulmarg"
           fill
           priority
@@ -87,7 +86,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
           <div className="relative col-span-2 row-span-2 aspect-square md:aspect-auto overflow-hidden rounded-2xl">
             <Image
-              src={withBasePath("/images/about/gallery-1.jpeg")}
+              src={"/images/about/gallery-1.jpeg"}
               alt="Skiing in Gulmarg"
               fill
               className="object-cover hover:scale-105 transition-transform duration-500"
@@ -95,7 +94,7 @@ export default function AboutPage() {
           </div>
           <div className="relative aspect-square overflow-hidden rounded-2xl">
             <Image
-              src={withBasePath("/images/about/gallery-2.jpeg")}
+              src={"/images/about/gallery-2.jpeg"}
               alt="Gulmarg Gondola"
               fill
               className="object-cover hover:scale-105 transition-transform duration-500"
@@ -103,7 +102,7 @@ export default function AboutPage() {
           </div>
           <div className="relative aspect-square overflow-hidden rounded-2xl">
             <Image
-              src={withBasePath("/images/about/gallery-3.jpeg")}
+              src={"/images/about/gallery-3.jpeg"}
               alt="Snowboarding instruction"
               fill
               className="object-cover hover:scale-105 transition-transform duration-500"
@@ -111,7 +110,7 @@ export default function AboutPage() {
           </div>
           <div className="relative aspect-square overflow-hidden rounded-2xl">
             <Image
-              src={withBasePath("/images/about/gallery-4.jpeg")}
+              src={"/images/about/gallery-4.jpeg"}
               alt="Group ski lesson"
               fill
               className="object-cover hover:scale-105 transition-transform duration-500"
@@ -119,7 +118,7 @@ export default function AboutPage() {
           </div>
           <div className="relative aspect-square overflow-hidden rounded-2xl">
             <Image
-              src={withBasePath("/images/about/gallery-5.jpeg")}
+              src={"/images/about/gallery-5.jpeg"}
               alt="Backcountry skiing near Gulmarg"
               fill
               className="object-cover hover:scale-105 transition-transform duration-500"
@@ -134,7 +133,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             <div className="relative aspect-[9/12] w-full max-w-md mx-auto lg:mx-0 overflow-hidden">
               <Image
-                src={withBasePath("/images/about/Founder 2.jpeg")}
+                src={"/images/about/Founder 2.jpeg"}
                 alt="Faizan, Founder of Gulmarg Apex Ski School"
                 fill
                 className="object-cover"

@@ -2,14 +2,13 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { withBasePath } from "@/lib/basePath";
 
 const images = [
-  withBasePath("/images/hero/hero-1.jpg"),
-  withBasePath("/images/hero/hero-2.jpeg"),
-  withBasePath("/images/hero/hero-3.jpeg"),
-  withBasePath("/images/hero/hero-4.jpg"),
-  withBasePath("/images/hero/hero-5.jpeg"),
+  "/images/hero/hero-1.jpg",
+  "/images/hero/hero-2.jpeg",
+  "/images/hero/hero-3.jpeg",
+  "/images/hero/hero-4.jpg",
+  "/images/hero/hero-5.jpeg",
 ];
 
 export default function HeroCarousel({ interval = 5000 }) {

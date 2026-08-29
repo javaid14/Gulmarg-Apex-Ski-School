@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Clock, ArrowUpRight } from "lucide-react";
-import { withBasePath } from "@/lib/basePath";
 
 export default function PackageCard({ pkg }) {
   return (
@@ -11,7 +10,7 @@ export default function PackageCard({ pkg }) {
     >
       <div className="relative h-52 w-full overflow-hidden">
         <Image
-          src={withBasePath(pkg.image)}
+          src={pkg.image}
           alt={pkg.title}
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-500"

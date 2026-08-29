@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { activities, getActivityBySlug } from "@/data/activities";
-import { withBasePath } from "@/lib/basePath";
 
 export function generateStaticParams() {
   return activities.map((a) => ({ slug: a.slug }));
@@ -25,7 +24,7 @@ export default function ActivityDetailPage({ params }) {
     <div>
       <section className="relative h-[46vh] min-h-[340px] w-full">
         <Image
-          src={withBasePath(activity.image)}
+          src={activity.image}
           alt={activity.title}
           fill
           priority
