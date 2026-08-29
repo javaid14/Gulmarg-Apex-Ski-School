@@ -1,15 +1,13 @@
 /** @type {import('next').NextConfig} */
 
-if (process.env.NODE_ENV === "production") {
-  const isGitHubPages = true;
-}
+const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig = {
   output: "export",
 
-  basePath: isGitHubPages ? "/Gulmarg-Apex-Ski-School" : "",
+  basePath: isProd ? "/Gulmarg-Apex-Ski-School" : "",
 
-  assetPrefix: isGitHubPages ? "/Gulmarg-Apex-Ski-School/" : "",
+  assetPrefix: isProd ? "/Gulmarg-Apex-Ski-School/" : "",
 
   images: {
     unoptimized: true,
