@@ -1,7 +1,7 @@
 {
-  "/packages/[slug]/page": "app/packages/[slug]/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/packages/page": "app/packages/page.js",
-  "/activities/[slug]/page": "app/activities/[slug]/page.js",
+  "/page": "app/page.js",
   "/contact-us/page": "app/contact-us/page.js",
-  "/about-us/page": "app/about-us/page.js"
+  "/api/contact/route": "app/api/contact/route.js"
 }
