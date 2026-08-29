@@ -11,7 +11,7 @@ export const activities = [
   {
     slug: "snowbiking",
     title: "Snowbiking",
-    image: "/images/activities/snowbike.jpg",
+    image: "/images/activities/Snowbike.jpg",
     summary:
       "A fun, easy-to-learn ride across the snow on a specially designed snow bike.",
     description:
