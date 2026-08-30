@@ -150,7 +150,7 @@ export const tours = [
     title: "Kashmir Tour 5 Days 4 Nights",
     duration: "5 Days / 4 Nights",
     price: "₹28,000",
-    image: "/images/tours/kashmir5.jpg",
+    image: "/images/tours/kashmir5.jpeg",
     summary:
       "A condensed Kashmir circuit covering Srinagar and Gulmarg\u2019s essential highlights.",
     highlights: [
@@ -209,7 +209,7 @@ export const treks = [
     title: "Gurez Camping 7 Days 6 Nights",
     duration: "7 Days / 6 Nights",
     price: "₹35,000",
-    image: "/images/trek/camp.jpg",
+    image: "/images/trek/camp.jpeg",
     summary:
       "Camp along the remote, untouched Gurez valley bordering the Line of Control.",
     highlights: [
@@ -234,7 +234,7 @@ export const treks = [
     title: "Tosamaidan Trek 7 Days 6 Nights",
     duration: "7 Days / 6 Nights",
     price: "₹32,000",
-    image: "/images/trek/tosamaidan.jpg",
+    image: "/images/trek/tosamaidan.jpeg",
     summary:
       "Trek through the vast alpine meadows of Tosamaidan, framed by pine forests and distant peaks.",
     highlights: [
@@ -259,7 +259,7 @@ export const treks = [
     title: "Kashmir Great Lakes Trek 7 Days 6 Nights",
     duration: "7 Days / 6 Nights",
     price: "₹36,000",
-    image: "/images/trek/lakes.jpg",
+    image: "/images/trek/lakes.jpeg",
     summary:
       "One of the Himalayas\u2019 most celebrated treks, linking a chain of high-altitude alpine lakes.",
     highlights: [

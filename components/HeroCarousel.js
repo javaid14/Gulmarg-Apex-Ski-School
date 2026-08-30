@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const images = [
-  "/images/hero/hero-1.jpg",
+  "/images/hero/hero-1.jpeg",
   "/images/hero/hero-2.jpeg",
   "/images/hero/hero-3.jpeg",
-  "/images/hero/hero-4.jpg",
+  "/images/hero/hero-4.jpeg",
   "/images/hero/hero-5.jpeg",
 ];
 

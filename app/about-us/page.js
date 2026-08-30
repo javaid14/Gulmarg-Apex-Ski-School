@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ShieldCheck, Award, Smile, Medal, Trophy, Globe2 } from "lucide-react";
+import FounderSpotlight from "@/components/FounderSpotlight";
+import TestimonialsSection from "@/components/TestimonialsSection";
 
 export const metadata = {
   title: "About Us | Gulmarg Apex Ski School",
@@ -64,7 +66,7 @@ export default function AboutPage() {
           <strong>Gulmarg Apex Ski School</strong> is a locally rooted skiing
           and adventure tourism outfit based in Gulmarg, Jammu &amp; Kashmir. We
           connect travellers from around the world with the Himalayas&apos;
-          legendary slopes &mdash; through expert instruction, quality gear, and
+          legendary slopes; through expert instruction, quality gear, and
           seamless logistics.
         </p>
         <p className="text-lg text-slate-700 leading-relaxed mb-6">
@@ -128,68 +130,7 @@ export default function AboutPage() {
       </section>
 
       {/* Founder Spotlight */}
-      <section className="bg-alpine-950 py-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-            <div className="relative aspect-[9/12] w-full max-w-md mx-auto lg:mx-0 overflow-hidden">
-              <Image
-                src={"/images/about/Founder 2.jpeg"}
-                alt="Faizan, Founder of Gulmarg Apex Ski School"
-                fill
-                className="object-cover"
-              />
-            </div>
-
-            <div className="">
-              <p className="text-ember-400 font-semibold uppercase tracking-widest text-sm mb-3">
-                About the Founder
-              </p>
-              <h2 className="font-display font-bold text-3xl sm:text-4xl text-snow mb-3">
-                Meet Faizan
-              </h2>
-              <p className="text-ice-300 font-medium mb-6">
-                Founder &amp; Professional Skier
-              </p>
-
-              <p className="text-ice-200 leading-relaxed mb-4">
-                Born and raised in Gulmarg, Kashmir, Faizan started skiing at
-                the age of just 4. What began as a childhood passion developed
-                into a successful competitive skiing career, leading him to
-                represent India at numerous international competitions,
-                including the Asian Championships in China.
-              </p>
-              <p className="text-ice-200 leading-relaxed mb-4">
-                With extensive international exposure, Faizan has trained in
-                Europe five times, gaining experience with advanced skiing
-                techniques and international training standards.
-              </p>
-              <p className="text-ice-200 leading-relaxed mb-8">
-                After years of competing and training at the highest levels,
-                Faizan founded Gulmarg Apex Ski School to share his knowledge
-                and experience with skiers and snowboarders of all levels —
-                turning his own journey from Gulmarg&apos;s slopes at age 4 to
-                representing India internationally into a path others can follow
-                too.
-              </p>
-
-              <h3 className="font-display font-semibold text-snow mb-4 text-sm tracking-wide uppercase">
-                Career Highlights
-              </h3>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                {ACHIEVEMENTS.map((a) => (
-                  <li
-                    key={a.text}
-                    className="flex items-center gap-2.5 rounded-xl bg-white/5 px-4 py-3"
-                  >
-                    <a.icon className="h-5 w-5 text-ember-400 shrink-0" />
-                    <span className="text-sm text-ice-100">{a.text}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FounderSpotlight />
 
       {/* Values */}
       <section className="mx-auto max-w-4xl px-6 lg:px-8 py-16">
@@ -227,6 +168,8 @@ export default function AboutPage() {
           </Link>
         </div>
       </section>
+
+      <TestimonialsSection />
     </div>
   );
 }

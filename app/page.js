@@ -14,6 +14,7 @@ import Testimonial from "@/components/Testimonial";
 import { packages, tours, treks } from "@/data/packages";
 import { activities } from "@/data/activities";
 import HeroCarousel from "@/components/HeroCarousel";
+import FounderSpotlight from "@/components/FounderSpotlight";
 
 export default function HomePage() {
   return (
@@ -192,54 +193,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Activities */}
-      <section className="mx-auto max-w-7xl px-6 lg:px-8 py-24">
-        <div className="max-w-2xl mb-12">
-          <p className="text-ember-600 font-semibold uppercase tracking-widest text-sm mb-3">
-            Activities
-          </p>
-          <h2 className="font-display font-bold text-3xl sm:text-4xl text-alpine-950 mb-4">
-            Activities
-          </h2>
-          <p className="text-slate-600 leading-relaxed">
-            ATV rides, snow biking, cozy bonfires, and Gondola rides above the
-            snowy landscape &mdash; fun and adventure for every thrill-seeker.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {activities.map((a) => (
-            <ActivityCard key={a.slug} activity={a} />
-          ))}
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="relative slope-edge-top bg-alpine-950 py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="max-w-2xl mb-14">
-            <p className="text-ember-400 font-semibold uppercase tracking-widest text-sm mb-3 pt-4">
-              Testimonials
-            </p>
-            <h2 className="font-display font-bold text-3xl sm:text-4xl text-snow mb-4">
-              What Our Guests Say
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Testimonial
-              name="Colby Weintraub"
-              quote="The most incredible of adventures. My guide knew so much about the mountain, and the shop had a great selection of touring gear perfect for backcountry skiing."
-            />
-            <Testimonial
-              name="Nidhi Ostwal"
-              quote="The service was excellent. Our instructor was friendly, patient, and incredibly helpful, making skiing feel easy, comfortable, and thoroughly enjoyable."
-            />
-            <Testimonial
-              name="Vijeth Patil"
-              quote="A very good snowboarding experience with a lot to learn from the instructors. Highly recommended for anyone picking up snowboarding for the first time."
-            />
-          </div>
-        </div>
-      </section>
+      <FounderSpotlight />
     </>
   );
 }
