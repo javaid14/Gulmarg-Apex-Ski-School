@@ -11,7 +11,7 @@ export function generateMetadata({ params }) {
   const activity = getActivityBySlug(params.slug);
   if (!activity) return {};
   return {
-    title: `${activity.title} | Gulmarg Ski Himalaya`,
+    title: `${activity.title} | Gulmarg Apex Ski School`,
     description: activity.summary,
   };
 }

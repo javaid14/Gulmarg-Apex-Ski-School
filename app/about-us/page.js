@@ -15,7 +15,7 @@ const ACHIEVEMENTS = [
   { icon: Trophy, text: "4× Khelo India Gold Medalist" },
   { icon: Trophy, text: "3× AIU Games Gold Medalist" },
   { icon: Globe2, text: "International Representative of India" },
-  { icon: Globe2, text: "Asian Championships — China" },
+  { icon: Globe2, text: "Asian Championships, China" },
   { icon: Award, text: "5× European Training Experience" },
 ];
 
